@@ -1,4 +1,33 @@
 <img class="banner" src="assets/imagens/banner.jpg" alt="Banner Deleite">
 <section class="products-container">
-  <h2 class="section-title">Milkshakes</h2>
+    <h2 class="section-title">Milkshakes</h2>
+    <div class="grid">
+        @for (milkshake of milkshakes; track milkshake.id) {
+            <dl-product-card [product]="milkshake" />
+        }
+    </div>
+</section>
+<section class="products-container">
+    <h2 class="section-title">Sorvetes</h2>
+    <div class="grid">
+        @for (icecream of icecreams; track icecream.id) {
+            <dl-product-card [product]="icecream" />
+        }
+    </div>
+</section>
+<section class="products-container">
+    <h2 class="section-title">Smoothies</h2>
+    <div class="grid">
+        @for (smoothie of smoothies; track smoothie.id) {
+            <dl-product-card [product]="smoothie" />
+        }
+    </div>
+</section>
+<section class="products-container">
+    <h2 class="section-title">Cafés gelados</h2>
+    <div class="grid">
+        @for (iceCoffee of iceCoffees; track iceCoffee.id) {
+            <dl-product-card [product]="iceCoffee" />
+        }
+    </div>
 </section>
