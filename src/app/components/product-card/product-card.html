@@ -5,6 +5,6 @@
     <div class="card-content">
     <h3 class="card-title">{{ product().title }}</h3>
     <p class="card-price">R$ {{ product().price.toFixed(2).replace('.', ',') }}</p>
-    <button class="btn-add">ADICIONAR AO CARRINHO</button>
+    <button (click)="onTap()" class="btn-add">ADICIONAR AO CARRINHO</button>
 </div>
 </div>

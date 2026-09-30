@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { ProductInterface } from '../../interfaces/product';
 
 @Component({
@@ -9,4 +9,9 @@ import { ProductInterface } from '../../interfaces/product';
 })
 export class ProductCard {
   product = input.required<ProductInterface>();
+  addFunction = output<void>();
+
+  onTap(){
+    this.addFunction.emit();
+  }
 }

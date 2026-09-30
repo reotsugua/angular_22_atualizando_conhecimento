@@ -1,9 +1,16 @@
 <img class="banner" src="assets/imagens/banner.jpg" alt="Banner Deleite">
+@if (showCartAlert()) {
+<div class="cart-alert">
+    <p><strong>Você tem {{ cartItens() }} itens no carrinho!</strong></p>
+    <p>Valor total estimado: R$ {{ totalValueCart() | number: '1.2-2' }}</p>
+    <button class="btn-empty-cart" (click)="clearCart()">ESVAZIAR CARRINHO</button>
+</div>
+}
 <section class="products-container">
     <h2 class="section-title">Milkshakes</h2>
     <div class="grid">
         @for (milkshake of milkshakes; track milkshake.id) {
-            <dl-product-card [product]="milkshake" />
+        <dl-product-card (addFunction)="addProduct()" [product]="milkshake" />
         }
     </div>
 </section>
@@ -11,7 +18,7 @@
     <h2 class="section-title">Sorvetes</h2>
     <div class="grid">
         @for (icecream of icecreams; track icecream.id) {
-            <dl-product-card [product]="icecream" />
+        <dl-product-card (addFunction)="addProduct()" [product]="icecream" />
         }
     </div>
 </section>
@@ -19,7 +26,7 @@
     <h2 class="section-title">Smoothies</h2>
     <div class="grid">
         @for (smoothie of smoothies; track smoothie.id) {
-            <dl-product-card [product]="smoothie" />
+        <dl-product-card (addFunction)="addProduct()" [product]="smoothie" />
         }
     </div>
 </section>
@@ -27,7 +34,7 @@
     <h2 class="section-title">Cafés gelados</h2>
     <div class="grid">
         @for (iceCoffee of iceCoffees; track iceCoffee.id) {
-            <dl-product-card [product]="iceCoffee" />
+        <dl-product-card (addFunction)="addProduct()" [product]="iceCoffee" />
         }
     </div>
 </section>

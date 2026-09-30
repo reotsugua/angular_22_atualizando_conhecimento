@@ -23,3 +23,37 @@
     gap: 30px;
     padding: 0 15px;
 }
+
+.cart-alert {
+    background: #e5ffbb;
+    padding: 20px;
+    text-align: center;
+}
+
+.cart-alert p strong {
+    font-family: 'Agbalumo', system-ui;
+    color: #3b51a4;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.cart-alert p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-empty-cart {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+    color: #2d2d2d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s;
+}
